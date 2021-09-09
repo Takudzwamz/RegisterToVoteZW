@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.canonicalService.setCanonicalURL();
-    this.title.setTitle('Christine Nhamo');
+    this.title.setTitle('#RegisterToVoteZW');
 
   }
 }
