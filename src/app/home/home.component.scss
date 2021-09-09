@@ -1,0 +1,200 @@
+/* Google Fonts -  Titillium Web */
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,900,200,300,700);
+
+
+
+
+
+p,li{
+  font-size: 0.9rem;
+  color: white;
+}
+
+li{
+  
+  color: white;
+}
+span{
+  color: white;
+}
+
+h2,h3{
+  color: white;
+}
+
+h1,h4,h5,h6{
+  color: #480470;
+}
+.welcome, .profile, .resume, .portfolio, .contact {
+  padding-top: 10px;
+}
+
+.welcome {
+ // padding-top: 100px !important;
+  padding-bottom: 20px;
+  background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+    
+}
+
+#welcome {
+  padding-top: 100px !important;
+  padding-bottom: 20px;
+ background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+}
+
+.welcome-content h1 {
+  font-weight: 900;
+  font-size: 56px;
+}
+
+.welcome-content h2 {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.welcome-content p {
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.welcome-content lottie-player {
+  padding-top: 10px;
+  font-size: 14px;
+  align-content: center;
+}
+
+.welcome-content p a {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #000000;
+}
+
+.social-button {
+  background-color: #5303e749;
+  border: 1px solid #69696900;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  margin-right: 5px;
+  margin-bottom: 5px;
+
+
+}
+
+.social-button i {
+  padding-right: 10px !important;
+}
+
+h3.head-bar {
+  font-weight: 700;
+  color: #28004d;
+  font-size: 24px;
+}
+
+h3.head-bar i {
+  padding-right: 10px;
+}
+
+.progress-bar {
+  background-color: #696969;
+}
+
+hr.hr-line1 {
+border: 0;
+height: 1px;
+background: #333;
+background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+
+hr.hr-line2 {
+border: 0;
+height: 0;
+border-top: 1px solid rgba(0, 0, 0, 0.1);
+border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+article.education {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.education h1 {
+  font-weight: 700;
+  font-size: 20px;
+  
+}
+
+.education small {
+  color: #1b004e;
+  font-size: 15px;
+  padding-left: 15px;
+}
+
+.education h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.education h3 {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+article.work {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.work h1 {
+  font-weight: 700;
+  font-size: 20px;
+  
+}
+
+.work small {
+  color: #1b004e;
+  font-size: 15px;
+  padding-left: 15px;
+}
+
+.work h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.work h3 {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.work p {
+  padding-top: 10px;
+}
+
+.label {
+  font-weight: 300;
+  font-size: 12px;
+  padding: 2px 8px;
+}
+
+.thumbnail-button {
+  background-color: #696969;
+  border: 1px solid #efefef;
+}
+
+.contact {
+  background-color: #696969;
+}
+
