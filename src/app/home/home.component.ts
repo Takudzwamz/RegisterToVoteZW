@@ -14,22 +14,33 @@ export class HomeComponent implements OnInit {
   showNavigationArrows = false;
   showNavigationIndicators = false;
   public images = [
+    '../assets/images/vote1.jpg',
 
- '../assets/images/harare.jpg',
+    '../assets/images/vote2.jpg',
 
- '../assets/images/rocks.jpg',
+    '../assets/images/vote3.jpg',
 
- '../assets/images/sunset.jpg',
+    '../assets/images/vote4.jpg',
+  ];
+  titles = [
+    '#RegisterToVoteZW',
+    '#RegisterToVoteZW',
+    '#RegisterToVoteZW',
+    '#RegisterToVoteZW',
+  ];
+  discription = [
+    'If YOU don’t Vote Others will make the decisions for YOU!',
+    'Voting gives you an opportunity to be part of decision-making that affects your life.',
+    'Voting is the most important way to make your voice heard on the issues that concern you.',
+    'Vote to Get more out of Life in a Better Zimbabwe',
+  ];
+  // images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
- '../assets/images/vicfalls.jpg'
-
- ];
- titles = [ 'Converge for Development', 'Converge for Development', 'Converge for Development', 'Converge for Development' ];
- discription = ['Transparency and Accountability', 'Collaboration and Team work', 'Pro-Rights and Pro-Poor', 'Results Based Oriented'];
- // images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/500`);
-
-
-  constructor(config: NgbCarouselConfig, private title: Title, private canonicalService: CanonicalService) {
+  constructor(
+    config: NgbCarouselConfig,
+    private title: Title,
+    private canonicalService: CanonicalService
+  ) {
     // customize default values of carousels used by this component tree
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
@@ -42,6 +53,5 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.canonicalService.setCanonicalURL();
     this.title.setTitle('#RegisterToVoteZW');
-
   }
 }
