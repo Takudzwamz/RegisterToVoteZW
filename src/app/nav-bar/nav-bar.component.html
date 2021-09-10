@@ -1,41 +1,55 @@
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-<nav style="
+
+<header>
+  <nav style="
 background: rgba(0, 0, 0, 0.1);
-box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-"
+backdrop-filter: blur( 3px );
+-webkit-backdrop-filter: blur( 10px );
+border-radius: 5px;
 
- class="navbar navbar-expand-lg navbar-light  mb-0">
-    
-    <a class="navbar-brand" [routerLink]="'/'">
-      <img style="border-radius: 5px;" src="/assets/images/icon.png" alt="logo" height="30" width="100">
-    </a>
+    " class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-0">
+    <div class="container">
+      <img width="100" alt="logo" [routerLink]="['/']" class="logo" src="/assets/images/icon.png" />
 
-  <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
-  <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_n5xcrawp.json" background="transparent" speed="1"
-      style="width: 40px; height: 40px;" loop autoplay></lottie-player>
-  </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+        aria-label="Toggle navigation" [attr.aria-expanded]="isExpanded" (click)="toggle()">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_n5xcrawp.json" background="transparent" speed="1"
+          style="width: 40px; height: 40px;" loop autoplay></lottie-player>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end" [ngClass]="{ show: isExpanded }">
+        <ul class="navbar-nav flex-grow">
+          <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+            <a style="font-size: 20px; font-weight:600; text-decoration: none; color:#28004d" class="nav-link "
+              [routerLink]="['/']">Home</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a style="font-size: 20px; font-weight:600; text-decoration: none; color:#28004d" class="nav-link text-#ff5e14"
+              [routerLink]="['/why_voting']">Why Voting?</a>
 
-  <!-- Step 2: Add the ngbCollapse directive to the element below. -->
-  <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <!-- Step 4: Close the menu when a link is clicked. -->
-        <a style="font-weight: 900; margin-left: 5px;" class="nav-link" [routerLink]="'/portfolio'" (click)="isMenuCollapsed = true"> Portfolio</a>
-      </li>
-      <!--<li class="nav-item">
-        <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Examples</a>
-      </li> -->
-      <li class="nav-item">
-        <a style="font-weight: 900; margin-left: 5px;" class="nav-link" [routerLink]="'/contact_me'" (click)="isMenuCollapsed = true">Contact Me</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a style="font-size: 20px; font-weight:600; text-decoration: none; color:#28004d" class="nav-link text-#ff5e14"
+              [routerLink]="['/centers']">Registration Centers</a>
+          
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a style="font-size: 20px; font-weight:600; text-decoration: none; color:#28004d" class="nav-link text-#ff5e14"
+              [routerLink]="['/contact_us']">Contact_us</a>
+          
+          </li>
+          
+          
+
+          
+
+
+          
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

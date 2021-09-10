@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ArticlesComponent } from './articles/articles.component';
+import { CentersComponent } from './centers/centers.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { PoliciesComponent } from './policies/policies.component';
@@ -11,17 +13,21 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'portfolio',
+    path: 'why_voting',
     component: PoliciesComponent,
   },
   {
-    path: 'contact_me',
-    component: ContactUsComponent,
+    path: 'centers',
+    component: CentersComponent,
   },
   {
-    path: '**', redirectTo: ''
-  }
-
+    path: 'articles',
+    component: ArticlesComponent,
+  },
+  {
+    path: 'contact_us',
+    component: ContactUsComponent,
+  },
 ];
 
 @NgModule({

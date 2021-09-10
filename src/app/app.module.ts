@@ -12,6 +12,13 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './services/contact.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { pdfDefaultOptions } from 'ngx-extended-pdf-viewer';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { MatTableModule } from '@angular/material/table';
+
+import { CentersComponent } from './centers/centers.component';
+import { ArticlesComponent } from './articles/articles.component';
 
 
 @NgModule({
@@ -23,14 +30,20 @@ import { ContactService } from './services/contact.service';
     PoliciesComponent,
     NavBarComponent,
     ContactUsComponent,
+  
+    CentersComponent,
+       ArticlesComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({ appId: "serverApp" }),
     AppRoutingModule,
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    PdfViewerModule,
   ],
   providers: [ContactService],
   bootstrap: [AppComponent],
