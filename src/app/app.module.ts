@@ -13,8 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './services/contact.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { pdfDefaultOptions } from 'ngx-extended-pdf-viewer';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 import { MatTableModule } from '@angular/material/table';
 
 import { CentersComponent } from './centers/centers.component';
@@ -43,7 +42,7 @@ import { ArticlesComponent } from './articles/articles.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
-    PdfViewerModule,
+    
   ],
   providers: [ContactService],
   bootstrap: [AppComponent],

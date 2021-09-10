@@ -5,7 +5,7 @@ import { CanonicalService } from '../services/canonical.service';
 import { AfterViewInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { pdfDefaultOptions } from 'ngx-extended-pdf-viewer';
+
 // import * as dataJSON from './carousel_images.json';
 
 @Component({
@@ -58,7 +58,7 @@ export class HomeComponent implements OnInit {
     private title: Title,
     private canonicalService: CanonicalService
   ) {
-    pdfDefaultOptions.assetsFolder = 'bleeding-edge';
+    
     // customize default values of carousels used by this component tree
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
