@@ -40,10 +40,10 @@ export class HomeComponent implements OnInit {
     '../assets/images/vote4.jpg',
   ];
   titles = [
-    '#RegisterToVoteZW',
-    '#RegisterToVoteZW',
-    '#RegisterToVoteZW',
-    '#RegisterToVoteZW',
+    '#RegisterToVote ZW',
+    '#RegisterToVote ZW',
+    '#RegisterToVote ZW',
+    '#RegisterToVote ZW',
   ];
   discription = [
     'If YOU don’t Vote Others will make the decisions for YOU!',
