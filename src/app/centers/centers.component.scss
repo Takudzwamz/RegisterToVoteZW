@@ -1,58 +1,56 @@
 /* Google Fonts -  Titillium Web */
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,900,200,300,700);
 
-
-
-
-
-p,li{
+p,
+li {
   font-size: 1.1rem;
   color: white;
 }
 
-li{
-  
+li {
   color: white;
 }
-span{
-  color: white;
-}
-
-h2,h3{
+span {
   color: white;
 }
 
-h1,h4,h5,h6{
+h2,
+h3 {
+  color: white;
+}
+
+h1,
+h4,
+h5,
+h6 {
   color: #480470;
 }
-.welcome, .profile, .resume, .portfolio, .contact {
+.welcome,
+.profile,
+.resume,
+.portfolio,
+.contact {
   padding-top: 10px;
 }
 
 .welcome {
- // padding-top: 100px !important;
+  padding-top: 100px !important;
   padding-bottom: 20px;
   background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 5px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    
-    
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
-
-
-
 
 #welcome {
   padding-top: 100px !important;
   padding-bottom: 20px;
- background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 5px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .welcome-content h1 {
@@ -89,8 +87,6 @@ h1,h4,h5,h6{
   padding-right: 20px !important;
   margin-right: 5px;
   margin-bottom: 5px;
-
-
 }
 
 .social-button i {
@@ -112,20 +108,20 @@ h3.head-bar i {
 }
 
 hr.hr-line1 {
-border: 0;
-height: 1px;
-background: #333;
-background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
-background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
-background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
-background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
 }
 
 hr.hr-line2 {
-border: 0;
-height: 0;
-border-top: 1px solid rgba(0, 0, 0, 0.1);
-border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 article.education {
@@ -136,7 +132,6 @@ article.education {
 .education h1 {
   font-weight: 700;
   font-size: 20px;
-  
 }
 
 .education small {
@@ -163,7 +158,6 @@ article.work {
 .work h1 {
   font-weight: 700;
   font-size: 20px;
-  
 }
 
 .work small {
@@ -200,4 +194,3 @@ article.work {
 .contact {
   background-color: #696969;
 }
-

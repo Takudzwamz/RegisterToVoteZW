@@ -21,7 +21,7 @@ const routes: Routes = [
     component: CentersComponent,
   },
   {
-    path: 'articles',
+    path: 'news',
     component: ArticlesComponent,
   },
   {
