@@ -85,10 +85,10 @@ export class PoliciesComponent implements OnInit {
 
   ngOnInit(): void {
     this.canonicalService.setCanonicalURL();
-    this.title.setTitle('Christines Portfolio');
+    this.title.setTitle('Why Voting?🎥');
     this.metaTagService.updateTag({
       name: 'description',
-      content: 'Christines Portfolio',
+      content: 'Hear what others think about elections',
     });
   }
 }

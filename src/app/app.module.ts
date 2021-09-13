@@ -20,6 +20,7 @@ import { CentersComponent } from './centers/centers.component';
 import { ArticlesComponent } from './articles/articles.component';
 
 
+
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
@@ -29,12 +30,12 @@ import { ArticlesComponent } from './articles/articles.component';
     PoliciesComponent,
     NavBarComponent,
     ContactUsComponent,
-  
+
     CentersComponent,
-       ArticlesComponent,
+    ArticlesComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: "serverApp" }),
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgbModule,
     FormsModule,
