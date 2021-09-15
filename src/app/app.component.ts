@@ -7,7 +7,7 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = '#RegisterToVoteZW';
+ // title = '#RegisterToVoteZW';
 
   constructor(private metaTagService: Meta) {}
 
