@@ -1,0 +1,83 @@
+
+.uiblur{
+background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: #FFFFFF;
+    
+}
+span{
+    font-size: 1.5em;
+    font-weight: 400;
+    
+}
+/* Text Centering Shortcut */
+.horizontal-center {
+  text-align: center;
+}
+
+.vertical-center {
+  position: relative;
+  //display: table-cell;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+img {
+  display: block;
+  margin: 0 auto 0 auto; /* Centred */
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Layout For Larger Screens */
+@media screen and (min-width: 40em) {
+  img {
+    padding: 0 2em 0 2em;
+    width: 66.6%;
+    border-radius: 5px;
+    
+  }
+}
+
+/* Page title */
+.bg {
+  position: absolute; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+.bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+  border-radius: 5px;
+}
+#page-title {
+  position: relative;
+  width: 100%;
+  color: white;
+  background-color: #00000000;
+  font-family: 'ubuntu';
+  overflow: hidden;
+}
+
+#page-title .container {
+  min-height: 350px;
+  display: table;
+}
+.date-published{
+color: #480470;
+}
+
+
+
+

@@ -8,7 +8,7 @@ import { map, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ContactService {
-private api = 'https://mailthis.to/christinenhamo@gmail.com';
+private api = 'https://mailthis.to/registertovotezw@gmail.com';
 
   constructor(private http: HttpClient) { }
 

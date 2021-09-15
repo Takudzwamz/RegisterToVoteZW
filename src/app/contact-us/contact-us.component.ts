@@ -6,6 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { Meta, Title } from '@angular/platform-browser';
+import { CanonicalService } from '../services/canonical.service';
 import { ContactService } from '../services/contact.service';
 
 @Component({
@@ -15,9 +16,16 @@ import { ContactService } from '../services/contact.service';
 })
 export class ContactUsComponent implements OnInit {
   FormData: FormGroup;
-  constructor(private builder: FormBuilder, private contact: ContactService, private title: Title, private metaTagService: Meta) {}
+  constructor(
+    private builder: FormBuilder,
+    private contact: ContactService,
+    private title: Title,
+    private metaTagService: Meta,
+    private canonicalService: CanonicalService
+  ) {}
 
   ngOnInit(): void {
+    this.canonicalService.setCanonicalURL();
     this.FormData = this.builder.group({
       Fullname: new FormControl('', [Validators.required]),
       Email: new FormControl('', [
@@ -26,9 +34,10 @@ export class ContactUsComponent implements OnInit {
       Comment: new FormControl('', [Validators.required]),
     });
     this.title.setTitle('Contact Us');
-    this.metaTagService.updateTag(
-      {name: 'description', content: 'Contact C4D'}
-    );
+    this.metaTagService.updateTag({
+      name: 'description',
+      content: 'Contact RegisterToVoteZW team',
+    });
   }
 
   onSubmit(FormData) {

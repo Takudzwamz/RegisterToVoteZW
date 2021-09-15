@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { CanonicalService } from '../services/canonical.service';
 
 @Component({
   selector: 'app-centers',
@@ -8,7 +10,11 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class CentersComponent implements OnInit {
   pdfSrc = 'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf';
-  constructor(private modalService: NgbModal) {}
+  constructor(
+    private modalService: NgbModal,
+    private title: Title,
+    private canonicalService: CanonicalService
+  ) {}
   open(content) {
     this.modalService
       .open(content, { ariaLabelledBy: 'modal-basic-title' })
@@ -22,5 +28,8 @@ export class CentersComponent implements OnInit {
       );
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.canonicalService.setCanonicalURL();
+    this.title.setTitle('Zec District and Provincial Registration offices');
+  }
 }

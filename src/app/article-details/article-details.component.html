@@ -1,0 +1,44 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
+
+<section class="uiblur">
+
+<header class="mt-3" >
+    <div >
+        <img src="https://strapi-blog-taku.herokuapp.com{{ data.article.image.url }}" style="border-radius:10px;" alt="">
+    </div>
+    
+</header>
+<div class="container">
+        <div class="horizontal-center vertical-center">
+            <h1 class="article-title">{{ data.article.title }}</h1>
+            
+        </div>
+    </div>
+<div class="container foreground">
+    <div class="row">
+        <div class="col-sm-12 mx-auto">
+            <div class="bs-component">
+                <article>
+                    <p>
+                        <markdown ngPreserveWhitespaces>
+                            {{ data.article.content }}
+                        </markdown>
+                    </p>
+                    
+
+                    <div class="horizontal-center">
+                        
+                        <div class="date-published">
+                            publishised On {{ data.article.publishedon }}
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</section>

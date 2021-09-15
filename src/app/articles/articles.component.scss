@@ -1,0 +1,56 @@
+
+
+.card {
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: #FFFFFF;
+}
+
+.user-timing {
+    right: 9px;
+    bottom: 9px;
+    color: #fff
+}
+
+.views-content {
+    color: #606271
+}
+
+.views {
+    font-size: 12px
+}
+
+.dots {
+    display: flex;
+    height: 10px;
+    width: 10px;
+    background-color: green;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-bottom: 6px
+}
+
+.days-ago {
+    margin-top: -10px;
+    color: #606271
+}
+
+.snipimage img {
+    height: 200px
+}
+
+.btn{
+    background-color:#480470;
+    border-color: transparent;
+}  
+
+
+span{
+    font-size: 1.5em;
+    font-weight: 400;
+    justify-content: center;
+}

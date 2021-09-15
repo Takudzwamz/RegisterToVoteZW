@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 import { CanonicalService } from '../services/canonical.service';
+import { Apollo } from 'apollo-angular';
+import gql from 'graphql-tag';
+import VOTING_QUERY from '../apollo/queries/voting/voting';
+import { Subscription } from 'rxjs';
+declare const togglePlay: any;
+
 
 @Component({
   selector: 'app-policies',
@@ -10,6 +16,11 @@ import { CanonicalService } from '../services/canonical.service';
   providers: [NgbCarouselConfig], // add NgbCarouselConfig to the component providers
 })
 export class PoliciesComponent implements OnInit {
+  data: any = {};
+  loading = true;
+  errors: any;
+  private queriesVotings: Subscription;
+  
   showNavigationArrows = false;
   showNavigationIndicators = false;
   public images = [
@@ -72,7 +83,8 @@ export class PoliciesComponent implements OnInit {
     config: NgbCarouselConfig,
     private title: Title,
     private metaTagService: Meta,
-    private canonicalService: CanonicalService
+    private canonicalService: CanonicalService,
+    private apollo: Apollo
   ) {
     // customize default values of carousels used by this component tree
     config.showNavigationArrows = true;
@@ -90,5 +102,22 @@ export class PoliciesComponent implements OnInit {
       name: 'description',
       content: 'Hear what others think about elections',
     });
+    this.queriesVotings = this.apollo
+      .watchQuery({
+        query: VOTING_QUERY,
+      })
+      .valueChanges.subscribe((result) => {
+        this.data = result.data;
+        this.loading = result.loading;
+        this.errors = result.errors;
+      });
+  }
+
+  ngOnDestroy() {
+    this.queriesVotings.unsubscribe(); 
+  }
+
+  onClick() {
+    togglePlay();
   }
 }

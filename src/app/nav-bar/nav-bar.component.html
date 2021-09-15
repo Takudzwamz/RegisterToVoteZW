@@ -4,7 +4,7 @@
 
 <header>
   <nav style="
-background: rgba(0, 0, 0, 0.1);
+background: rgba(255, 255, 255, 0.1);
 backdrop-filter: blur( 3px );
 -webkit-backdrop-filter: blur( 10px );
 border-radius: 5px;
@@ -20,7 +20,7 @@ border-radius: 5px;
           style="width: 40px; height: 40px;" loop autoplay></lottie-player>
       </button>
       <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end" [ngClass]="{ show: isExpanded }">
-        <ul class="navbar-nav flex-grow">
+        <ul *ngIf="data" class="navbar-nav flex-grow">
           <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
             <a style="font-size: 20px; font-weight:600; text-decoration: none; color:#28004d" class="nav-link "
               [routerLink]="['/']">Home</a>
@@ -38,13 +38,18 @@ border-radius: 5px;
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
             <a style="font-size: 20px; font-weight:600; text-decoration: none; color:#28004d" class="nav-link text-#ff5e14"
-              [routerLink]="['/news']">News</a>
+              [routerLink]="['/contact_us']">Contact Us</a>
           
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
             <a style="font-size: 20px; font-weight:600; text-decoration: none; color:#28004d" class="nav-link text-#ff5e14"
-              [routerLink]="['/contact_us']">Contact Us</a>
+              [routerLink]="['/news']">News</a>
           
+          </li>
+          <li class="nav-item" *ngFor="let category of data.categories">
+            <a style="font-size: 15px; font-weight:300; text-decoration: none; color:#28004d; padding:5px;" class="nav-link text-#ff5e14" routerLink="/news-category/{{ category.id }}" routerLinkActive="active">
+              {{ category.name }}
+            </a>
           </li>
           
           

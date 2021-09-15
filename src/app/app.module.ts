@@ -14,12 +14,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './services/contact.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 import { MatTableModule } from '@angular/material/table';
 
 import { CentersComponent } from './centers/centers.component';
 import { ArticlesComponent } from './articles/articles.component';
-
-
+import { GraphQLModule } from './graphql.module';
+import { ArticleDetailsComponent } from './article-details/article-details.component';
+import { MarkdownModule } from 'ngx-markdown';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -33,8 +36,11 @@ import { ArticlesComponent } from './articles/articles.component';
 
     CentersComponent,
     ArticlesComponent,
+    ArticleDetailsComponent,
+    CategoryComponent,
   ],
   imports: [
+    MarkdownModule.forRoot(),
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgbModule,
@@ -43,7 +49,7 @@ import { ArticlesComponent } from './articles/articles.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
-    
+    GraphQLModule,
   ],
   providers: [ContactService],
   bootstrap: [AppComponent],
