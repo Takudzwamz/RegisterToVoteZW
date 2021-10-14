@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Apollo } from "apollo-angular";
-import gql from "graphql-tag";
-import CATEGORIES_QUERY from "../apollo/queries/category/categories";
-import { Subscription } from "rxjs";
+import { Apollo } from 'apollo-angular';
+import gql from 'graphql-tag';
+import CATEGORIES_QUERY from '../apollo/queries/category/categories';
+import { Subscription } from 'rxjs';
 
 @Component({
-  selector: "app-nav-bar",
-  templateUrl: "./nav-bar.component.html",
-  styleUrls: ["./nav-bar.component.scss"],
+  selector: 'app-nav-bar',
+  templateUrl: './nav-bar.component.html',
+  styleUrls: ['./nav-bar.component.scss'],
 })
 export class NavBarComponent implements OnInit {
   data: any = {};
