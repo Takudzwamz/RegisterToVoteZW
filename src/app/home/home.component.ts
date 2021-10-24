@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
   discription = [
     'If YOU don’t Vote Others will make the decisions for YOU!',
     'Voting gives you an opportunity to be part of decision-making that affects your life.',
-    'Voting is the most important way to make your voice heard on the issues that concern you.',
+    'Voting is the most important way to make your voice be heard on the issues that concern you.',
     'Vote to Get more out of Life in a Better Zimbabwe',
   ];
   // images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/500`);
